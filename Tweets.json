@@ -1,1 +1,94 @@
-[]
+{
+	"created_at": "Thu Sep 10 19:21:34 +0000 2020", //多分ツイートした日
+	"id": 1304137962649649200,
+	"id_str": "1304137962649649152",
+	"text": "コカコカコーラ コカコカ",//ツイート内容(テキスト)
+	"truncated": "False",//ツイート文が切りとられてるか
+	"entities": {
+		"hashtags": [],//ツイート内のハッシュタグ
+		"symbols": [],//絵文字つきハッシュタグ
+		"user_mentions": [],//メンションされたユーザー達
+		"urls": []//ツイート内のURL
+	},
+	"metadata": {
+		"iso_language_code": "ja",
+		"result_type": "recent"
+	},
+	"source": "<a href='https://mobile.twitter.com' rel='nofollow'>Twitter Web App</a>",
+	"in_reply_to_status_id": "None",
+	"in_reply_to_status_id_str": "None",
+	"in_reply_to_user_id": "None",
+	"in_reply_to_user_id_str": "None",
+	"in_reply_to_screen_name": "None",
+	"user": {
+		"id": 3230712428,
+		"id_str": "3230712428",
+		"name": "イイノテン",//表示名
+		"screen_name": "ntenten_Q",//アカウントID
+		"location": "",
+		"description": "職はアーティストです。20歳になりました。新宿に住んでいます。\nReactを使った開発が好きで、\n個人開発ではデザイン、フロント、バックエンド、インフラをやります =)",
+		"url": "https://t.co/L5h4ND8yI7",
+		"entities": {
+			"url": {
+				"urls": [
+					{
+						"url": "https://t.co/L5h4ND8yI7",
+						"expanded_url": "https://ten-portforio.web.app/",
+						"display_url": "ten-portforio.web.app",
+						"indices": [
+							0,
+							23
+						]
+					}
+				]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": "False",
+		"followers_count": 589,
+		"friends_count": 352,
+		"listed_count": 23,
+		"created_at": "Sat May 30 13:12:15 +0000 2015",
+		"favourites_count": 19653,
+		"utc_offset": "None",
+		"time_zone": "None",
+		"geo_enabled": "True",
+		"verified": "False",//認証アカウントか否か。trueなら認証アカウントで、ユーザー名の横にチェックマークが付く。
+		"statuses_count": 41012, //ツイートの合計数。
+		"lang": "None",
+		"contributors_enabled": "False",//このアカウントが共用アカウントか否か。TweetDeckではアカウントを複数ユーザーで共用できるチームの機能がある。trueなら共用アカウント。
+		"is_translator": "False",
+		"is_translation_enabled": "False",
+		"profile_background_color": "000000",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+		"profile_background_tile": "False",
+		"profile_image_url": "http://pbs.twimg.com/profile_images/1296263095174586372/CwgfOzc4_normal.jpg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/1296263095174586372/CwgfOzc4_normal.jpg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/3230712428/1597905079",
+		"profile_link_color": "981CEB",
+		"profile_sidebar_border_color": "000000",
+		"profile_sidebar_fill_color": "000000",
+		"profile_text_color": "000000",
+		"profile_use_background_image": "False",
+		"has_extended_profile": "False",
+		"default_profile": "False",//アカウントを登録してからプロフィールを変更しているか
+		"default_profile_image": "False",//アカウントを登録してから、アイコン画像を設定していないままの状態か。trueなら、まだ設定していない状態(タマゴアイコン)。
+		"following": "False",
+		"follow_request_sent": "False",
+		"notifications": "False",
+		"translator_type": "none"
+	},
+	"geo": "None",
+	"coordinates": "None",
+	"place": "None",//ロケーションに場所の情報を紐付けている場合、その場所のPlace Objectが含まれる。
+	"contributors": "None",
+	"is_quote_status": "False",//ツイートが引用リツイートの場合、trueになる。
+	"retweet_count": 0,//RT数
+	"favorite_count": 0,//いいね数
+	"favorited": "False",
+	"retweeted": "False",
+	"lang": "ja"
+}
