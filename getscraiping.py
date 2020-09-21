@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import json
 
 content_count_num = 1
 news_content_array = []
@@ -22,3 +23,5 @@ for i in range(5):
   print("===========")
   content_count_num +=1
 print(news_content_array)
+with open('./netnewsdata.json', 'w') as f:
+    json.dump({"data":news_content_array}, f, ensure_ascii=False, indent=4)
