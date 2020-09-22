@@ -1,33 +1,42 @@
 import requests 
 import os
+import json
 from dotenv import load_dotenv
- 
+
 load_dotenv()
- 
 GOOGLE_LANG_API_KEY  = os.environ['GOOGLE_LANG_API_KEY']
+
+json_open = open('./replaced_netnewsdata.json', 'r')
+json_load = json.load(json_open)
+news_data_array = json_load['data']
  
 #APIキーを入力
 key = GOOGLE_LANG_API_KEY
- 
-#感情分析したいテキスト
-text = "降板したショーンK氏の後任として、夜のニュース番組「ユアタイム」（フジテレビ系）にレギュラー出演することになったモーリー・ロバートソン氏。　今回、モーリー氏にショーンK氏についての取材を申し込むと、真意を説明したいと自ら執筆した原稿が編集部に届いた。いち早くショーンK氏、そして日本メディアの“デタラメ”に気づいていたモーリー氏が、緊急出演の舞台裏や問題の本質を、包み隠さずに明かす――。◆ ◆ ◆　さる3月、文春砲が撃たれ、第二弾に被弾した「ショーンK」を名乗り続けていた人物は屈服、J-WAVEで嗚咽しながらのお詫びをする。そのお詫び放送を銀座の端にあるレストランで聴いた。最後に流れた番組のお知らせは、J-WAVEが「うちは特に悪くありませんから」と幕引きする内容だった。ここにおいて「ショーンK」は使い捨てられた。　同じ頃、ぼくは『ユアタイム』出演日数が劇的に増えた。それは想定内だった。だが、続けて予期しなかった事態が連続する。東スポ、日刊ゲンダイ、週刊ポスト、アサヒ芸能などにゴシップ記事が書かれたのだ。None　など、お約束のいじりである。「ショーンK」の経歴詐称が発覚し、フジテレビは動揺しきっていた。これ以上炎上したくない、という無理もないロジックで、今度は「後釜」であるぼくが詮索された。ぼくの学歴は輝かしいが、詐称はない。1981年に東京大学とハーバード大学に同時合格し、東大に1学期だけ通った後で休学（その後退学）し、ハーバードに入学、卒業したことは周知の事実だ。実は『よくひとりぼっちだった』というタイトルで合格までの経緯を自叙伝に著し、他ならぬ文藝春秋から1984年に発表している。当時、5万部を超えるノンフィクション部門のベストセラーにもなった。　だが「ショーンK」で動揺したフジテレビ側は不安を拭えず、「東大とハーバード以外に合格したすべての大学の合格通知のコピーを提出してください」　と過剰な身体検査を要求。その後も東スポに引用されたぼくの過去のツィートが追求の対象になった。　そのツィートはこういう内容だ。「コカインはやったことがあります。最初で最後にやったのはアメリカで1985年頃でした。鼻からです。オバマより回数は少ないはず」　これは2015年に、日本の薬物報道の不毛さを揶揄するべく書き込んだものだったが、スキャンダルを洗い出そうとする東スポのたゆまぬ努力で検索に引っかかった。フジテレビ側は、「コカインをいつやったのか。何度やったのか。当時のアメリカの法律でこれはどれぐらいの量刑となる罪だったのか」　というディテールを提出せよ、と再三連絡してきた。1985年、つまり31年前のマサチューセッツ州のコカインに関する州法をオフィス・モーリーのチームで調べて回答文を送信した。微罪であり、アメリカ在住時の行為で、一度きりであり、しかも多分時効だ。だがそれでもフジテレビ側の疑心暗鬼は静まらず、「ほかに何かありませんか」　という問い合わせが相次いだ。　過剰な身体検査はとどまるところを知らず、最終的には「ニコ生」での配信を自粛もしくは停止してほしいという、ぼくからすると荒唐無稽な要求まで飛び出した。せっかく手にした地上波のチャンスをふいにするのは残念だったが、「ニコ生」に有料登録までしてくれた2000人以上のユーザーを裏切るつもりはない。潔く「それでは番組を降板させていただきます」　と交渉する一歩手前で、案外すんなりと「ニコ生」への自粛要請は立ち枯れた。勘ぐった言い方をするなら、「ショーンK」に続いてぼくまでが降板したら番組が立ちいかなくなる。強気の交渉をすることで、フジテレビとの関係は正常化した。"
- 
+
 #APIのURL
 url = 'https://language.googleapis.com/v1/documents:analyzeSentiment?key=' + key
- 
-#基本情報の設定 JAをENにすれば英語のテキストを解析可能
-header = {'Content-Type': 'application/json'}
-body = {
-    "document": {
-        "type": "PLAIN_TEXT",
-        "language": "JA",
-        "content": text
-    },
-    "encodingType": "UTF8"
-}
- 
-#json形式で結果を受け取る。
-response = requests.post(url, headers=header, json=body).json()
- 
-#分析の結果をコンソール画面で見やすく表示
-print(response["documentSentiment"])
+
+analysed_data_json = []
+
+for index, news_text in enumerate(news_data_array):
+  #基本情報の設定 JAをENにすれば英語のテキストを解析可能
+  header = {'Content-Type': 'application/json'}
+  body = {
+      "document": {
+          "type": "PLAIN_TEXT",
+          "language": "JA",
+          "content": news_text
+      },
+      "encodingType": "UTF8"
+  }
+  #json形式で結果を受け取る。
+  response = requests.post(url, headers=header, json=body).json()
+  #分析の結果をコンソール画面で見やすく表示
+  print(response["documentSentiment"])
+  analysed_data_json.append({
+    "text": news_text,
+    "documentSentiment": response["documentSentiment"]
+  })
+print (analysed_data_json)
+with open('./analysed_netnewsdata.json', 'w') as f:
+    json.dump({"analysed_data":analysed_data_json}, f, ensure_ascii=False, indent=4)
