@@ -5,7 +5,8 @@ import json
 
 content_count_num = 1
 news_content_array = []
-for i in range(5):
+max_news_content_num = 900 #ニュース記事の番号の最大値
+for i in range(max_news_content_num):
   table_content_num = content_count_num
   urlName = "https://bunshun.jp/articles/-/" + str(table_content_num)
   url = requests.get(urlName)
