@@ -1,8 +1,17 @@
 import matplotlib.pyplot as plt
+import json
  
+json_open = open('./analysed_netnewsdata.json', 'r')
+json_load = json.load(json_open)
+analysed_news_data_array = json_load['analysed_data']
+
 # 対象データ
-x = [1, 2, 3]
-y = [2, 4, 6]
+x = []
+y = []
+
+for index, analysed_result in enumerate(analysed_news_data_array):
+  x.append(analysed_result["documentSentiment"]["magnitude"])
+  y.append(analysed_result["documentSentiment"]["score"])
  
 # figureを生成する
 fig = plt.figure()
