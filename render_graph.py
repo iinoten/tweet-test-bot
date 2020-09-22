@@ -20,7 +20,7 @@ fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
  
 # axesに散布図を設定する
-ax.scatter(x, y, c='b')
+ax.scatter(x, y, c='b', s=1)
  
 # 表示する
-plt.savefig("graph.jpg")
+plt.savefig("scalar_plot_graph.jpg")
