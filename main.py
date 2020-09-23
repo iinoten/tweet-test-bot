@@ -23,7 +23,7 @@ timeline_url = 'https://api.twitter.com/1.1/search/tweets.json'
 follower_url = 'https://api.twitter.com/1.1/followers/ids.json'
 
 # Enedpointへ渡すパラメーター
-keyword = ["マスク min_retweets:20"]#20RT以上されてるツイートを取得
+keyword = ["い min_retweets:50"]#20RT以上されてるツイートを取得
 
 params ={
          'count' : 1000,      # 取得するtweet数
