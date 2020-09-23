@@ -36,7 +36,7 @@ for index, news_text in enumerate(news_data_array):
 
   analysed_sentence_text_array = []
   for sentence_index, sentence_data in enumerate(response["sentences"]):
-    analysed_sentence_text_array.append( sentence_data["sentiment"] )
+    analysed_sentence_text_array.append( { "sentence_txt": sentence_data["text"]["content"], "sentence_analyse_result":  sentence_data["sentiment"]} )
   analysed_data_json.append({
     "text": news_text,
     "documentSentiment": response["documentSentiment"],
