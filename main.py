@@ -6,7 +6,7 @@ from requests_oauthlib import OAuth1Session
 
 now_time = datetime.datetime.now()
 
-CK  = 
+CK  =  
 CS  = 
 AT  = 
 ATS = 
