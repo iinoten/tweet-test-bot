@@ -34,7 +34,7 @@ def load_sentimental(text):
     variable_sepalate_sentimental += math.fabs( hold_senti_score - sepalate_score_point )
     #保持するためのスコアに今回のスコアを保存
     hold_senti_score = sepalate_score_point
-  importance_of_magnitude_point = -20
-  importance_of_diff_sentimental_score_point = -30
-  analyse_sentimental_result = response["documentSentiment"]["magnitude"] * importance_of_magnitude_point + variable_sepalate_sentimental * importance_of_diff_sentimental_score_point
-  return( analyse_sentimental_result )
+  return({
+    "magnitude": response["documentSentiment"]["magnitude"],
+    "sentences_fluctuation": variable_sepalate_sentimental
+  })
