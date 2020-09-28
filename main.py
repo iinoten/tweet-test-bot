@@ -28,7 +28,7 @@ if timeline_req.status_code == 200:
     for line in res['statuses']:
         print(line["created_at"], line["id"], line["text"], line["retweet_count"], line["entities"]["urls"][0]["url"], line["user"]["verified"])
         tweetId = line["id"]
-        reply = "悲しいですね"
+        reply = "悲しいです"
         mention = {"status":reply, "in_reply_to_status_id":tweetId, "auto_populate_reply_metadata":True}
         resPost = twitter.post("https://api.twitter.com/1.1/statuses/update.json", params=mention)
 
