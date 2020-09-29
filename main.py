@@ -49,9 +49,9 @@ def main():
             reply = "点数：" +  str( reliability_point )
             reply = ""
             if reliability_point > 70:
-                reply =  "botによるツイート内容の信用度分析結果【"+ str( reliability_point ) +"points】\n"+"botによる自動ファクトチェックにより、ツイート内容が比較的 信用度の値が高い結果になりました。SNSでの情報の共有にはデマ・フェイクニュースに騙されないように真偽の程度を確認するようにしてください"
+                reply =  "botによるツイート内容の信用度分析結果【"+ str( reliability_point ) +"points】\n"+"botによる自動ファクトチェックにより、ツイート内容が比較的 信用度の値が高い結果になりました。SNSでの情報の共有にはデマ・フェイクニュースに騙されないように真偽の程度を確認するようにしてください\n https://iinoten.github.io/tweet-test-bot"
             else:
-                reply = "!botによるツイート内容の信用度分析結果【"+ str( reliability_point ) + "points】\n " + "botによる自動ファクトチェックにより、ツイート内容の 信用度の値が低い結果になりました。これはあくまでもプログラムによる自動チェックの結果であり、真偽の確実な判断ではありません。情報の出所などを確認し、デマやフェイクニュースに気をつけてください。"
+                reply = "!botによるツイート内容の信用度分析結果【"+ str( reliability_point ) + "points】\n " + "botによる自動ファクトチェックにより、ツイート内容の 信用度の値が低い結果になりました。これはあくまでもプログラムによる自動チェックの結果であり、真偽の確実な判断ではありません。情報の出所などを確認し、デマやフェイクニュースに気をつけてください。\n https://iinoten.github.io/tweet-test-bot"
             mention = {"status":reply, "in_reply_to_status_id":tweetId, "auto_populate_reply_metadata":True}
             resPost = twitter.post("https://api.twitter.com/1.1/statuses/update.json", params=mention)
 
