@@ -20,7 +20,7 @@ twitter = OAuth1Session(CK, CS, AT, ATS)
 timeline_url = 'https://api.twitter.com/1.1/search/tweets.json'
 
 # Enedpointへ渡すパラメーター
-keyword = ["コカコカコーラ コカコカコカ min_retweets:0 " + "since:" + str(now_time.year) + '-' + str(now_time.month) + '-' + str(now_time.day - 1)] #20RT以上されてるツイートを取得
+keyword = ["コロナ min_retweets:1000 " + "since:" + str(now_time.year) + '-' + str(now_time.month) + '-' + str(now_time.day - 1)] #20RT以上されてるツイートを取得
 params ={
          'count' : 1000,      # 取得するtweet数
          'q'     :  keyword,# 検索キーワード
