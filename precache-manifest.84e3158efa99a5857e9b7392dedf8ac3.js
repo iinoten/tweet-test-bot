@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e306f7fbaed48e7bc4e44cc114fa3581",
+    "revision": "0b35c3f792aa4a94e581501cac3dc94f",
     "url": "/tweet-test-bot/index.html"
   },
   {
-    "revision": "dd569d23856977e9149a",
+    "revision": "e729cfd45178fb5b1205",
     "url": "/tweet-test-bot/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "3c897321c2dad2c96f4a",
-    "url": "/tweet-test-bot/static/js/2.c03f26a7.chunk.js"
+    "revision": "a7b8a73e48a6ccf66100",
+    "url": "/tweet-test-bot/static/js/2.ad297de9.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/tweet-test-bot/static/js/2.c03f26a7.chunk.js.LICENSE.txt"
+    "url": "/tweet-test-bot/static/js/2.ad297de9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dd569d23856977e9149a",
-    "url": "/tweet-test-bot/static/js/main.0ca01317.chunk.js"
+    "revision": "e729cfd45178fb5b1205",
+    "url": "/tweet-test-bot/static/js/main.d61a58d9.chunk.js"
   },
   {
     "revision": "d906d4b52b1980c314b3",
