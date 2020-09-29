@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tweet-test-bot/static/css/main.5f361e03.chunk.css",
+    "main.js": "/tweet-test-bot/static/js/main.0ca01317.chunk.js",
+    "main.js.map": "/tweet-test-bot/static/js/main.0ca01317.chunk.js.map",
+    "runtime-main.js": "/tweet-test-bot/static/js/runtime-main.e0ba70c9.js",
+    "runtime-main.js.map": "/tweet-test-bot/static/js/runtime-main.e0ba70c9.js.map",
+    "static/js/2.c03f26a7.chunk.js": "/tweet-test-bot/static/js/2.c03f26a7.chunk.js",
+    "static/js/2.c03f26a7.chunk.js.map": "/tweet-test-bot/static/js/2.c03f26a7.chunk.js.map",
+    "index.html": "/tweet-test-bot/index.html",
+    "precache-manifest.d3d13722940f747a425ec5fee42a054e.js": "/tweet-test-bot/precache-manifest.d3d13722940f747a425ec5fee42a054e.js",
+    "service-worker.js": "/tweet-test-bot/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/tweet-test-bot/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.c03f26a7.chunk.js.LICENSE.txt": "/tweet-test-bot/static/js/2.c03f26a7.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/tweet-test-bot/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0ba70c9.js",
+    "static/js/2.c03f26a7.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.0ca01317.chunk.js"
+  ]
+}
