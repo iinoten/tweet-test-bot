@@ -59,7 +59,7 @@ def main():
 
     else: print("Failed: %d" % timeline_req.status_code)
 
-schedule.every().day.at("8:00").do(main); # 毎朝8時にスクリプトを実行
+schedule.every().days.at("08:00").do(main); # 毎朝8時にスクリプトを実行
 while True:
     schedule.run_pending()
     time.sleep(1)
