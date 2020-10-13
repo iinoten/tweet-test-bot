@@ -57,5 +57,6 @@ def main():
 
     else: print("Failed: %d" % timeline_req.status_code)
 
-if __name__ == '__main__':
-    main()
+# コード実行の行をコメントアウト
+#if __name__ == '__main__':
+#    main()
