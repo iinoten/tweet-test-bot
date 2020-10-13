@@ -6,6 +6,8 @@ from requests_oauthlib import OAuth1Session
 from dotenv import load_dotenv
 import os
 import analyse_sentimental_magnitude_and_score
+import schedule
+import time
 
 load_dotenv()
 
@@ -56,6 +58,11 @@ def main():
             resPost = twitter.post("https://api.twitter.com/1.1/statuses/update.json", params=mention)
 
     else: print("Failed: %d" % timeline_req.status_code)
+
+schedule.every().day.at("8:00").do(main); # 毎朝8時にスクリプトを実行
+while True:
+    schedule.run_pending()
+    time.sleep(1)
 
 # コード実行の行をコメントアウト
 #if __name__ == '__main__':
