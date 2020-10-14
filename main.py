@@ -44,7 +44,7 @@ def main():
                 reliability_point -= 30
             if is_posted_user_verifined:
                 reliability_point += 90
-            reliability_point + analyse_sentimental_magnitude_and_score.load_sentimental( tweet_text )
+            reliability_point += analyse_sentimental_magnitude_and_score.load_sentimental( tweet_text )
 
             reply = "点数：" +  str( reliability_point )
             reply = ""
