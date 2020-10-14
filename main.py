@@ -60,10 +60,11 @@ def main():
     else: print("Failed: %d" % timeline_req.status_code)
 
 schedule.every().days.at("08:00").do(main); # 毎朝8時にスクリプトを実行
+
+# 起動時にテストで実行させる
+if __name__ == '__main__':
+    main()
+
 while True:
     schedule.run_pending()
     time.sleep(1)
-
-# コード実行の行をコメントアウト
-#if __name__ == '__main__':
-#    main()
