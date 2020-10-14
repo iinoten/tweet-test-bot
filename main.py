@@ -6,6 +6,8 @@ from requests_oauthlib import OAuth1Session
 from dotenv import load_dotenv
 import os
 import analyse_sentimental_magnitude_and_score
+import schedule
+import time
 
 load_dotenv()
 
@@ -57,5 +59,11 @@ def main():
 
     else: print("Failed: %d" % timeline_req.status_code)
 
-if __name__ == '__main__':
-    main()
+schedule.every().days.at("08:00").do(main); # 毎朝8時にスクリプトを実行
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+
+# コード実行の行をコメントアウト
+#if __name__ == '__main__':
+#    main()
